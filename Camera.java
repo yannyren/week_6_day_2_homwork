@@ -11,7 +11,7 @@ public class Camera {
   }
 
   public String printDetails(){
-    return this.name +" " + this.filterType + " " + this.resolution;
+    return this.name + " " + this.filterType + " " + this.resolution;
   }
 
 }

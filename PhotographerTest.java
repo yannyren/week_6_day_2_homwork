@@ -7,18 +7,18 @@ public class PhotographerTest {
   // ArrayList<Camera> camera;
   DigitalCamera digitalcamera;
   AnalogCamera analogcamera;
-  Photographer photogapher;
+  Photographer photographer;
 
   @Before 
   public void before() {
     digitalcamera = new DigitalCamera("Nikon 34T", "Noise reduction filter", "Hi-resolution");
     analogcamera = new AnalogCamera("Sony ILCE5100L", "No noise reduciton", "Lo-resolution"); 
-    photogapher = new Photographer();
+    photographer = new Photographer();
   }
 
   @Test
   public void cameraCollectionStartEmpty() {
-    String size = photographer.size;
+    int size = photographer.count();
     assertEquals(0, size);
   }
 
@@ -30,15 +30,15 @@ public class PhotographerTest {
 
   @Test
   public void canRemoveCamera(){
-    photographer.addCamera(camera);
-    photographer.removeCamera(camera);
-    assertEquals(0, photogapher.count);
+    photographer.addCamera(digitalcamera);
+    photographer.removeCamera(digitalcamera);
+    assertEquals(0, photographer.count());
 
   }
 
   // @Test
   // public void canPrintAllDetails(){
-    
+
   // }
 
 

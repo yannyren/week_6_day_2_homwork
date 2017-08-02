@@ -20,17 +20,21 @@ public class Photographer {
     this.camera.remove(camera);
   }
 
-  public String count() {
-    return this.camera.size;
+  public int count() {
+    return this.camera.size();
   }
 
   public String printAllDetails() {
-    for (i = 0; i < camera.size; i++) {
-      return camera[i].printAllDetails();
+    String details = "";
+
+    for (int i = 0; i < camera.size(); i++) {
+      details += camera.get(i).printDetails();
     }
+
+    return details;
   }
 
-  public String numberOfPhotos() {
+  public int numberOfPhotos() {
     return journal.size();
   }
 
